@@ -5,10 +5,6 @@ from Cython.Build import cythonize
 from Cython.Distutils import build_ext
 from setuptools import setup, Extension
 
-cython_directives = {
-    'embedsignature': True,  # needed to embed docstrings in ext module
-    }
-
 root = os.path.dirname(__file__)
 ext_files = glob.glob(os.path.join(root, 'src', '*.pyx'))
 ext_files.append(os.path.join(root, 'src', 'pure_py_module.py'))
@@ -24,8 +20,7 @@ setup(
     name="cythontest",
     version="0.1",
     description="blarg",
-    ext_modules=cythonize(extensions, force=True,
-                          compiler_directives=cython_directives),
+    ext_modules=cythonize(extensions, force=True),
     zip_safe = False,
     cmdclass = {
         'build_ext': build_ext,

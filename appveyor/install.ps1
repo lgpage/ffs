@@ -103,7 +103,6 @@ function main () {
     InstallPip $env:PYTHON
     InstallPipPackage $env:PYTHON setuptools
     InstallPipPackage $env:PYTHON wheel
-    InstallPipPackage $env:PYTHON tox
 }
 
 main

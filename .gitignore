@@ -1,16 +1,8 @@
-# Ignore C, CPP and Cython output build files
-*.o
-*.so
-
-# Ignore Cython cythonize output files
+# Ignore Cython output files
 src/*.c
 src/*.cpp
+src/*.so
 
-# Ignore cython_setup.py build dir
+# Ignore setup.py dirs
 build/
-
-# Ignore cmake files
-Makefile
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
+*.egg*
