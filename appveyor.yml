@@ -22,11 +22,11 @@ install:
   - "%PYTHON%\\Scripts\\pip.exe --version"
   - "%PYTHON%\\Scripts\\wheel.exe version"
   - "%PYTHON%\\Scripts\\tox.exe --version"
+  - "%PYTHON%\\Scripts\\pip.exe install cython"
 
 build: off
 build_script:
-  - "%CMD_IN_ENV% %PYTHON%\\Scripts\\pip.exe install cython"
-  - "%CMD_IN_ENV% %PYTHON%\\python.exe setup.py build_ext --inplace --use-cython"
+  - "%CMD_IN_ENV% %PYTHON%\\python.exe setup.py build_ext --inplace"
 
 cache:
   - C:\Downloads\ffs -> appveyor\install.ps1
